@@ -18,6 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Assemble engine.js
+        run: |
+          cat engine.part*.js > engine.js
+          test -s engine.js
+          wc -c engine.js
+          test -f icons/icon.svg
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
