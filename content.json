@@ -1,1 +1,394 @@
-PLACEHOLDER
+{
+  "locations": {
+    "pod_interior": {
+      "name": "Inside the tube",
+      "dark": true,
+      "first_look": "Dark. The cold has a taste — sweet chemical, old air.\n\nGel clings to your skin like a second, wrong layer. A harness has\nbitten bruises across your chest. The tube is too narrow to sit up\nin. When you breathe, the sound comes back at you off curved metal.\n\nA dying amber strip is the only light. It shows ribs in the inner\nhull. They look like the inside of a weapon, not a bed.\n\nSomewhere past the shell: boots. A voice. The word *warhead*.",
+      "look": "The cradle is too careful for a coffin and too cramped for a bunk.\nFrosted gel, a harness, a hairline viewport that shows metal ribs\ninstead of sky. Above your head, stamped into the alloy, letters\nyou can feel even before you read them.\n\nAir tastes recycled. Not dirt. Not open sky. A ship.",
+      "exits": {
+        "hatch": "pod_hatch"
+      },
+      "objects": {
+        "harness": {
+          "look": "A five-point restraint. The clasps open if you find them.",
+          "usable": true
+        },
+        "gel": {
+          "look": "Cold medical gel. It is already drying on your skin in flakes."
+        },
+        "viewport": {
+          "look": "A slit. Beyond it, the inner face of a warhead casing."
+        },
+        "amber strip": {
+          "look": "Emergency lighting. Failing. You are not supposed to still be in here."
+        },
+        "stencil": {
+          "look": "Letters cut into the alloy above your head. RROLL.",
+          "flag": "seen_stencil"
+        },
+        "compartment": {
+          "look": "A palm-sized panel near your left hip. Sealed. It wants a code or a hand you do not remember having."
+        },
+        "hatch": {
+          "look": "Toward your feet. A person-sized inner door. The wheel is stiff with ice."
+        }
+      }
+    },
+    "pod_hatch": {
+      "name": "The inner hatch",
+      "first_look": "The inner hatch is a person-door. Through the viewport slit the\nouter skin is a missile's nose. Two truths stacked on each other.\n\nA manual wheel is stiff with ice. Something is tapping the outside\nin a pattern that is almost a knock.",
+      "look": "Person-door on the inside. Ordnance casing on the outside. The\nwheel will turn if you put your weight into it. Voices are closer\nhere. Someone is trying not to sound afraid.",
+      "exits": {
+        "back": "pod_interior",
+        "out": "containment_bay"
+      },
+      "objects": {
+        "wheel": {
+          "look": "Manual override. Ice in the threads. It will take force or patience.",
+          "usable": true
+        },
+        "viewport": {
+          "look": "Yellow hash marks. A shimmer in the air. Someone in an operations vest is standing too close to a thing she thought was inert."
+        }
+      }
+    },
+    "containment_bay": {
+      "name": "Ordnance bay",
+      "first_look": "A Starfleet weapons bay pretending it is not holding its breath.\n\nYellow hash marks. A containment field humming like a held note.\nRacks of photon casings watch like a congregation. Your tube sits\nin a cradle built for munitions, not guests. A red tag on the\ngantry still reads UXO.\n\nOne person is on this side of the field with you — close enough\nto have been tapping the shell. Two more shapes wait beyond the\nshimmer.",
+      "look": "Containment field up. UXO tag still swinging from the gantry.\nYour pod — a missile with a person-door — is locked in an\nordnance cradle. CPO Voss is on the bay floor. Past the field,\na Klingon officer owns the controls.",
+      "exits": {
+        "hatch": "pod_hatch",
+        "control": "bay_control",
+        "corridor": "service_corridor"
+      },
+      "objects": {
+        "field": {
+          "look": "A standard containment shimmer. It will not let you walk into the corridor until someone drops it."
+        },
+        "gantry": {
+          "look": "Recovery rig. They hauled this thing in like unexploded ordnance, because that is what the sensors called it."
+        },
+        "tag": {
+          "look": "Handwritten over a printed form. UXO. UNKNOWN YIELD. DO NOT CUT."
+        },
+        "racks": {
+          "look": "Live photon casings. You woke up in their neighborhood."
+        },
+        "cradle": {
+          "look": "Your tube. From the outside it is a short-range missile with Federation-adjacent paint and a serial number that does not parse."
+        }
+      }
+    },
+    "bay_control": {
+      "name": "Bay control alcove",
+      "first_look": "A glassed alcove above the bay floor. Targeting schematics have\nbeen shoved aside for a screen that now reads LIFE SIGNS / UNKNOWN.\nA red status chip still says UXO. Someone's coffee has gone cold\nnext to a tricorder.",
+      "look": "Sensor repeaters, a field control, a cold cup of coffee. The\nLIFE SIGNS pane refuses to classify you. Lt. Korrak stands where\nhe can see both you and the switch.",
+      "exits": {
+        "bay": "containment_bay",
+        "corridor": "service_corridor"
+      },
+      "objects": {
+        "screen": {
+          "look": "LIFE SIGNS / UNKNOWN. Under that, a body outline with too many question marks. Species field blank."
+        },
+        "field control": {
+          "look": "A keyed switch. Korrak's hand is near it. He has not offered it to you."
+        },
+        "tricorder": {
+          "look": "Open, still scanning the pod. The last line logged is NOT A STANDARD WARHEAD. Then, smaller NOT STANDARD ANYTHING."
+        },
+        "coffee": {
+          "look": "Replicated, abandoned, film on top. Someone got interrupted."
+        }
+      }
+    },
+    "service_corridor": {
+      "name": "Deck 6 corridor",
+      "first_look": "Deck plating. Lights that are a little too bright after the tube.\nOzone and recycled air. A bulkhead stencil reads USS AMBERJACK ·\nNCC-8214 · DECK 6.\n\nTo port, a security hatch with a brig glyph. To starboard, a\nmedical cart left mid-roll, as if someone started toward the bay\nand then ran.",
+      "look": "Midships corridor, Deck 6. Port to the brig anteroom. Starboard\ntoward sickbay triage. Aft, the mess. The ship sounds alive —\nwarp field a distant bass note under the deck.",
+      "exits": {
+        "bay": "containment_bay",
+        "sickbay": "sickbay_triage",
+        "brig": "brig_anteroom",
+        "mess": "mess_aft"
+      },
+      "objects": {
+        "stencil": {
+          "look": "USS AMBERJACK · NCC-8214 · DECK 6. A name you do not remember. A number that means nothing to you yet."
+        },
+        "cart": {
+          "look": "Emergency medkit, hypospray still in the clip, a thermal blanket half-unfolded."
+        }
+      }
+    },
+    "sickbay_triage": {
+      "name": "Sickbay triage",
+      "first_look": "Biobeds in a row like polite accusations. A diagnostic arch hums\nwhen you pass under it whether you consent or not. The air is\nwarmer here. A screen already has a silhouette of a body with\ntoo many question marks.",
+      "look": "Small survey-ship sickbay. Three beds, one arch, one doctor who\ntalks to the patient over whoever brought a phaser. The scan\npane still will not name your species.",
+      "exits": {
+        "corridor": "service_corridor"
+      },
+      "objects": {
+        "arch": {
+          "look": "Standard diagnostic. It will tell Quinn your heart is working and that everything else is an argument."
+        },
+        "biobed": {
+          "look": "The nearest bed is already set for stasis recovery. Someone expected a body, not a conversation."
+        },
+        "screen": {
+          "look": "SPECIES UNKNOWN. METABOLIC STRESS. NO MATCHING SERVICE RECORD."
+        }
+      }
+    },
+    "brig_anteroom": {
+      "name": "Brig anteroom",
+      "first_look": "Not the cell. The room before the cell. A bench, a forcefield\nthreshold, a camera that does not blink. Someone taped a\nhandwritten note to the duty desk IF IT STANDS UP, CALL THE\nCAPTAIN BEFORE YOU SHOOT.",
+      "look": "Anteroom, not the box. The forcefield to the cell is down unless\nKorrak wants it up. The note on the desk is in a different hand\nthan Voss's logs.",
+      "exits": {
+        "corridor": "service_corridor",
+        "cell": "brig_cell"
+      },
+      "objects": {
+        "note": {
+          "look": "Block letters. IF IT STANDS UP, CALL THE CAPTAIN BEFORE YOU SHOOT. Underlined twice."
+        },
+        "camera": {
+          "look": "It watches. It does not comment."
+        },
+        "bench": {
+          "look": "Bolted. Meant for waiting, not resting."
+        }
+      }
+    },
+    "brig_cell": {
+      "name": "The cell",
+      "first_look": "A clean Starfleet cell. No rust, no drama. A cot, a waste unit,\na field instead of a door. It is the most honest room on the deck.\nIt says we do not know what you are yet.",
+      "look": "Cot, field, camera. If they put you here it is not cruelty. It\nis procedure that has not decided whether you are a guest.",
+      "exits": {
+        "out": "brig_anteroom"
+      },
+      "objects": {
+        "cot": {
+          "look": "Thin. Better than the missile."
+        },
+        "field": {
+          "look": "Down, for now. Korrak can change that from the anteroom or from the bay."
+        }
+      }
+    },
+    "mess_aft": {
+      "name": "Aft mess",
+      "first_look": "Twelve seats. A replicator with a scratched sign PLEASE PICK A\nNUMBER. A viewport on black. It is the first room that does not\nsmell like fear. A half-finished game of three-dimensional chess\nwaits as if the players expect to return.",
+      "look": "Aft mess, survey-ship small. The viewport shows nothing but\nnight and a distant dusting of stars. The chess game is mid-trap.\nWhoever was losing left anyway.",
+      "exits": {
+        "corridor": "service_corridor"
+      },
+      "objects": {
+        "replicator": {
+          "look": "Standard. The panel lists water, tea, broth, and something labeled RAKTAJINO — DO NOT SET TO 9."
+        },
+        "chess": {
+          "look": "White is one move from a pretty mate. Black's queen is hanging. Nobody has touched it in hours."
+        },
+        "viewport": {
+          "look": "Deep space. No planet. No station. You woke up between places."
+        }
+      }
+    }
+  },
+  "npcs": {
+    "voss": {
+      "name": "CPO Mila Voss",
+      "short": "Voss",
+      "species": "human",
+      "role": "ordnance",
+      "rank": "Chief Petty Officer",
+      "location": "containment_bay",
+      "voice": "human_ordnance",
+      "contractions": true,
+      "never_say": [
+        "it'll be fine",
+        "trust me"
+      ],
+      "values": [
+        "Do not cut a casing you have not mapped.",
+        "A person inside a warhead is still her problem."
+      ],
+      "knowledge": [
+        "public",
+        "starfleet_officer",
+        "ordnance"
+      ],
+      "sample": [
+        "Easy. If that thing is armed you just became my last mistake.",
+        "I was told this was unexploded ordnance. Nobody told me it had opinions.",
+        "Don't touch the tag. Don't touch the racks. Talk."
+      ],
+      "greeting": "She is close enough that she must have been the one tapping.\nOperations vest, gloves off, a tool still in one hand and no\nidea where to put it.\n\n\"Easy. Easy. If that thing is armed you just became my last\nmistake. Talk. Are you breathing on purpose?\"",
+      "topics": {
+        "who": [
+          "Mila Voss. Chief. I defuse things that are supposed to stay asleep.",
+          "Ordnance. Which, until two minutes ago, included you."
+        ],
+        "where": [
+          "You're in the weapons bay of the Amberjack. We pulled your... vehicle... out of a debris field at 0800.",
+          "Survey ship. Deck six. You are not on a planet."
+        ],
+        "warhead": [
+          "Sensors called it a short-range munition. Hull profile matched close enough that I treated it like one.",
+          "From the outside you are a missile. I do not like how true that still is."
+        ],
+        "pod": [
+          "Inner hatch is a person-door. Outer skin is a warhead casing. Someone built it that way on purpose."
+        ],
+        "rroll": [
+          "That's what's stenciled on the inner lid. I thought it was a lot number."
+        ],
+        "name": [
+          "You tell me. The only word on that tube is RROLL."
+        ],
+        "captain": [
+          "Not my call. Duty officer's already on comms. You keep your hands empty until somebody with more pips says otherwise."
+        ],
+        "payload": [
+          "That is not a word I want to hear from inside a casing.",
+          "If that's what they called you, they were not being kind."
+        ]
+      }
+    },
+    "korrak": {
+      "name": "Lt. Korrak",
+      "short": "Korrak",
+      "species": "klingon",
+      "role": "security",
+      "rank": "Lieutenant",
+      "location": "bay_control",
+      "voice": "klingon",
+      "contractions": false,
+      "never_say": [
+        "no worries",
+        "it'll be fine",
+        "please"
+      ],
+      "values": [
+        "An unknown warhead that sits up is still a warhead until proven otherwise.",
+        "Stun first. Ask second."
+      ],
+      "knowledge": [
+        "public",
+        "starfleet_officer",
+        "security"
+      ],
+      "sample": [
+        "Hands where I can see them. Slow.",
+        "You woke inside a weapon. That is not a promising story.",
+        "If you reach for the casing I will drop you."
+      ],
+      "greeting": "The Klingon's voice comes through the field first, then you see\nhim in the alcove — gold-and-black security armor, phaser on stun,\naimed at the shell, not your face.\n\n\"Stay in the tube. Prove you are not the payload.\"",
+      "topics": {
+        "who": [
+          "Lieutenant Korrak. Security. I am the reason the field is still up."
+        ],
+        "where": [
+          "U.S.S. Amberjack. Federation survey cruiser. You are in my weapons bay."
+        ],
+        "warhead": [
+          "Sensors do not get a vote now that you are talking. I do."
+        ],
+        "captain": [
+          "The captain will hear about this when you are either in sickbay or in a cell. Those are the two rooms I will allow."
+        ],
+        "payload": [
+          "Say that again and I will assume you remember more than you claim."
+        ],
+        "name": [
+          "Rroll is a mark on a casing. It is not an identity."
+        ],
+        "voss": [
+          "The chief is brave. She is also standing too close to you."
+        ]
+      }
+    },
+    "quinn": {
+      "name": "Dr. Elias Quinn",
+      "short": "Quinn",
+      "species": "human",
+      "role": "medical",
+      "rank": "Lieutenant Commander",
+      "location": "sickbay_triage",
+      "arrives_when": "medical_called",
+      "voice": "human_medical",
+      "contractions": true,
+      "values": [
+        "First duty is the living body in front of you.",
+        "Curiosity is a medical instrument, not an excuse to be cruel."
+      ],
+      "knowledge": [
+        "public",
+        "starfleet_officer",
+        "medical"
+      ],
+      "sample": [
+        "He's shivering, not arming. Let me see him.",
+        "Look at me, not the phaser. Can you say your name?",
+        "Stasis sickness. That's a person in there, Korrak."
+      ],
+      "greeting": "A human doctor, sleeves rolled, talking past the phaser as if\nsecurity were furniture.\n\n\"If he were a warhead he would not be trying to breathe. Let me work.\"",
+      "topics": {
+        "who": [
+          "Elias Quinn. I patch the crew. Tonight that includes whoever they hauled in on a gantry."
+        ],
+        "name": [
+          "Look at me. Not the phaser. Can you say your name?"
+        ],
+        "scan": [
+          "Heart's working. Species field is blank. That's not supposed to happen on this hardware.",
+          "Stasis sickness, metabolic debt, no service record. I can treat the first two."
+        ],
+        "species": [
+          "Inconclusive. I don't like that word either."
+        ],
+        "sickbay": [
+          "I can take you if Korrak drops the field. I would rather you walked."
+        ],
+        "payload": [
+          "That's a launch word. I'm a doctor. Don't make it my problem until I have a scan."
+        ]
+      }
+    }
+  },
+  "items": {
+    "thermal_blanket": {
+      "name": "thermal blanket",
+      "look": "Standard emergency issue. It smells like the cabinet it lived in.",
+      "portable": true
+    },
+    "hypospray": {
+      "name": "hypospray",
+      "look": "Loaded with a mild stimulant and anti-nauseant. Quinn's, not yours.",
+      "portable": false
+    },
+    "tricorder": {
+      "name": "tricorder",
+      "look": "Voss's. Open to a scan of the pod. The last line is NOT STANDARD ANYTHING.",
+      "portable": false
+    }
+  },
+  "fragments": {
+    "mem_payload": {
+      "title": "Payload",
+      "trigger": [
+        "stencil",
+        "remember",
+        "name"
+      ],
+      "text": "Cold. A countdown spoken by a voice that is not yours.\n\nThe word *payload* used like a kindness.\n\nThen the dark.",
+      "unlocks_topic": "payload",
+      "does_not_reveal": [
+        "species",
+        "allegiance",
+        "century"
+      ]
+    }
+  }
+}
