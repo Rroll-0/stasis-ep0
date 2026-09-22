@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0a0e14" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+  <title>STASIS — Episode 0</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div id="brand">STASIS</div>
+      <div id="hud"></div>
+      <button type="button" id="btn-new" title="New campaign">New</button>
+    </header>
+    <main id="terminal" aria-live="polite"></main>
+    <form id="cmdline" autocomplete="off">
+      <span id="prompt">&gt;</span>
+      <input id="input" type="text" enterkeyhint="go" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" />
+      <button type="submit" id="btn-go">Go</button>
+    </form>
+  </div>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
